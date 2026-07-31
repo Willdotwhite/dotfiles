@@ -18,3 +18,17 @@ bindkey "\e[A" up-line-or-beginning-search
 bindkey "\eOA" up-line-or-beginning-search
 bindkey "\e[B" down-line-or-beginning-search
 bindkey "\eOB" down-line-or-beginning-search
+
+### Clear + remove scrollback
+# TODO: For reasons I don't understand, this appears to be working for CMD+K
+_clear_all() {
+  # 3J = clear scrollback, 2J = clear screen, H = cursor home
+  printf '\e[3J\e[2J\e[H'
+  # In ZLE context, redraw prompt cleanly.
+  if zle; then
+    zle reset-prompt
+  fi
+}
+
+zle -N _clear_all
+bindkey '^L' _clear_all
