@@ -9,7 +9,8 @@ brew install \
   fzf \
   git \
   htop \
-  jq
+  jq \
+  zsh-syntax-highlighting
 
 # Current work focus/requirements
 brew install \

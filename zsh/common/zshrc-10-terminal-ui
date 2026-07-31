@@ -1,0 +1,9 @@
+# Keep terminal interaction quiet and informative.
+unsetopt BEEP
+
+autoload -Uz add-zsh-hook
+_set_tab_title_to_cwd() {
+    # OSC 1 updates the tab/icon title in compatible terminals.
+    print -Pn "\e]1;%~\a"
+}
+add-zsh-hook precmd _set_tab_title_to_cwd

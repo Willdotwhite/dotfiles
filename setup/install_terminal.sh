@@ -16,6 +16,6 @@ window-show-tab-bar = always
 
 # Hide emoji from tab title
 macos-titlebar-proxy-icon = hidden
-title = " "
+shell-integration-features = no-title
 
 EOF

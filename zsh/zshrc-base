@@ -1,0 +1,26 @@
+# Initialize named color variables used by prompt/completion styling.
+autoload colors; colors
+
+### History
+# Improve history quality/share: dedupe entries and append immediately.
+setopt extended_history hist_no_store hist_ignore_dups hist_expire_dups_first hist_find_no_dups inc_append_history share_history hist_reduce_blanks hist_ignore_space
+# Persist history in the standard user zsh history file.
+export HISTFILE=~/.zsh_history
+# Keep a large in-memory history for better recall.
+export HISTSIZE=1000000
+# Persist the same large history size to disk.
+export SAVEHIST=1000000
+
+# Don't count common path separators as word characters
+WORDCHARS=${WORDCHARS//[&.;\/]}
+
+# Show elapsed time for commands that run longer than 5 seconds.
+REPORTTIME=5
+
+# Enable brew shell completion
+# Prepend Homebrew completion definitions to function search path.
+FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
+# Make `ls` default to verbose human-friendly output.
+LSOPTS='-lAvF'  # long mode, show all, natural sort, type squiggles, friendly sizes
+alias ls="ls $LSOPTS"

@@ -1,0 +1,4 @@
+alias gs="git status"
+alias gd="git diff"
+alias gitfuckit="git add -A && git reset --hard"
+alias gitbranchclean="git branch --merged | egrep -v '(^\*|master|main)' | xargs git branch -d"

@@ -1,0 +1,2 @@
+# Prefer Homebrew curl so newer TLS features are available by default.
+export PATH="/opt/homebrew/opt/curl/bin:$PATH"
