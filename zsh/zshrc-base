@@ -19,7 +19,7 @@ REPORTTIME=5
 
 # Enable brew shell completion
 # Prepend Homebrew completion definitions to function search path.
-FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+FPATH="$(/opt/homebrew/bin/brew --prefix)/share/zsh/site-functions:${FPATH}"
 
 # Make `ls` default to verbose human-friendly output.
 LSOPTS='-lAvF'  # long mode, show all, natural sort, type squiggles, friendly sizes

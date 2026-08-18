@@ -1,0 +1,5 @@
+# Prefer Homebrew commands over inbuilt, so do this at the end
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Prefer Homebrew curl so newer TLS features are available by default.
+export PATH="/opt/homebrew/opt/curl/bin:$PATH"

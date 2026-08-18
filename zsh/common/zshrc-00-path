@@ -1,2 +1,2 @@
-# Prefer Homebrew curl so newer TLS features are available by default.
-export PATH="/opt/homebrew/opt/curl/bin:$PATH"
+# Added by Toolbox App
+export PATH="$PATH:/Users/whitew02/Library/Application Support/JetBrains/Toolbox/scripts"

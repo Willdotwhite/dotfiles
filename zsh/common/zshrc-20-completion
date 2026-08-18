@@ -33,4 +33,4 @@ else
     compinit -C
 fi
 
-eval "$(uv generate-shell-completion zsh)"
+eval "$(/opt/homebrew/bin/uv generate-shell-completion zsh)"
