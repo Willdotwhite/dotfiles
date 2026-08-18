@@ -1,0 +1,30 @@
+[user]
+    email = 13312237+Willdotwhite@users.noreply.github.com
+    name = Will White
+[help]
+    autoCorrect = 1
+[url "git@github.com:"]
+    insteadOf = https://github.com/
+    insteadOf = https://github.com
+[pull]
+    rebase = true
+[push]
+    autoSetupRemote = true
+[rebase]
+    autosquash=true
+    autostash=true
+    updateRefs=true
+[alias]
+    bb = !sh ~/.dotfiles/git/better-git-branch.sh
+    clearold = !sh ~/.dotfiles/git/clear-old-branches.sh
+[init]
+    defaultBranch = main
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+[pager]
+    branch = false
+[rerere]
+    enabled = true
