@@ -1,6 +1,7 @@
 #zmodload zsh/zprof
 
-export ZSHROOT="$HOME/dotfiles-vsc/zsh"
+export DFROOT="$HOME/.dotfiles"
+export ZSHROOT="$DFROOT/zsh"
 
 # Load the shared base shell configuration first.
 source "$ZSHROOT/zshrc-base"
@@ -18,7 +19,7 @@ for file in $ZSHROOT/local/zshrc-*; do
 done
 
 # Theme
-source "$HOME/dotfiles-vsc/dotwo.zsh-theme"
+source "$DFROOT/dotwo.zsh-theme"
 
 # Must be last
 # Syntax highlighting needs to load after most prompt/keybinding setup.
