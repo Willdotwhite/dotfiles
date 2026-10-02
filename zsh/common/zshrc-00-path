@@ -1,2 +1,2 @@
 # Added by Toolbox App
-export PATH="$PATH:/Users/whitew02/Library/Application Support/JetBrains/Toolbox/scripts"
+export PATH="$PATH:$HOME/Library/Application Support/JetBrains/Toolbox/scripts"
