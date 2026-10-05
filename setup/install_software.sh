@@ -11,9 +11,13 @@ else
   echo "Homebrew already installed"
 fi
 
-# TODO: Install Java
-#$ curl -s "https://get.sdkman.io" | bash
-#$ source "$HOME/.sdkman/bin/sdkman-init.sh"
-#sdk install java 25.2.4-graalce
+# If the only Java installed is the default installation,
+# install SDKMAN and Java
+if ! which -a java 2>/dev/null | grep -v '^/usr/bin/java$' >/dev/null; then
+  echo "Installing SDKMAN and Java 25"
+  curl -s "https://get.sdkman.io" | bash
+  source "$HOME/.sdkman/bin/sdkman-init.sh"
+  sdk install java 25.2.4-graalce
+fi
 
 echo "Software install steps completed."
